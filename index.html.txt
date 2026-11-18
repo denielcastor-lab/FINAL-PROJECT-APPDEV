@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DC LUXURIOUS | Fine Jewelry – Botolan, Zambales</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#home" class="logo">DC<span>LUXURIOUS</span></a>
+  <nav>
+    <a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#services">SERVICES</a><a href="#reviews">REVIEWS</a>
+  </nav>
+  <input id="search" type="search" placeholder="Search..." aria-label="Search products">
+  <button id="cartBtn" class="cart-btn" aria-label="Open cart">🛒 <b id="cartCount">0</b></button>
+</header>
+
+<section id="home" class="panel split">
+  <p>Welcome to DC LUXURIOUS, where elegance meets craftsmanship. We curate timeless, high-quality jewelry designed to add a touch of sophistication and luxury to your everyday style. Discover pieces crafted to shine as brightly as you do.</p>
+  <img src="images/store1.svg" alt="Luxury jewelry showroom" data-fallback="Showroom">
+</section>
+
+<section id="about" class="panel split reverse">
+  <img src="images/store2.svg" alt="Elegant jewelry boutique with chandelier" data-fallback="Boutique">
+  <div>
+    <p>At DC LUXURIOUS, we believe that true beauty lives in the finer details. Born from a passion for craftsmanship and elegance.</p>
+    <p>Our business is dedicated to delivering high-quality, timeless jewelry that adds a touch of pure luxury to your everyday life.</p>
+  </div>
+</section>
+
+<section id="services" class="products">
+  <h2 class="tag">List of Products</h2>
+  <div class="grid" id="productGrid"></div>
+  <p id="noResult" hidden>No products match your search.</p>
+</section>
+
+<section id="reviews" class="panel reviews">
+  <h2>Reviews</h2>
+  <div class="rev-grid">
+    <blockquote>★★★★★<br>“The diamond ring is breathtaking.” <cite>— Sample customer</cite></blockquote>
+    <blockquote>★★★★★<br>“Beautiful craftsmanship, fast service.” <cite>— Sample customer</cite></blockquote>
+    <blockquote>★★★★★<br>“Perfect gift for our anniversary.” <cite>— Sample customer</cite></blockquote>
+  </div>
+  <small>Sample reviews for demonstration only.</small>
+</section>
+
+<section id="contact" class="contact">
+  <form id="contactForm" novalidate>
+    <div class="row">
+      <input id="cName" placeholder="Name" aria-label="Name" required>
+      <input id="cEmail" type="email" placeholder="Email" aria-label="Email" required>
+    </div>
+    <textarea id="cMsg" placeholder="Message here..." aria-label="Message" required></textarea>
+    <button class="gold-btn" type="submit">Send Message</button>
+    <p id="formMsg" role="status"></p>
+  </form>
+  <div class="info">
+    <h3>Contact Us:</h3>
+    <p class="big">Deniel Castor<br><small>Owner / CEO</small></p>
+    <p class="big"><a href="tel:09668696296">09668696296</a></p>
+    <p>📍 Botolan, Zambales</p>
+    <h3>Social Links:</h3>
+    <div class="social">
+      <a href="#" class="fb" aria-label="Facebook">f</a>
+      <a href="#" class="tt" aria-label="TikTok">♪</a>
+      <a href="#" class="ig" aria-label="Instagram">◎</a>
+      <a href="mailto:dcluxurious@example.com" class="gm" aria-label="Email">M</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 DC LUXURIOUS · Botolan, Zambales · Owner: Deniel Castor</footer>
+
+<!-- Cart drawer -->
+<aside id="cart" class="drawer" aria-hidden="true">
+  <div class="drawer-head"><h3>Your Cart</h3><button id="closeCart" aria-label="Close">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="total">Total: <b id="cartTotal">₱0</b></div>
+  <button id="checkoutBtn" class="gold-btn">Checkout</button>
+</aside>
+
+<!-- Checkout modal -->
+<div id="modal" class="modal" hidden>
+  <form id="checkoutForm" class="modal-box" novalidate>
+    <h3>Checkout</h3>
+    <input id="oName" placeholder="Full name" required>
+    <input id="oPhone" placeholder="Mobile number" required>
+    <input id="oAddr" placeholder="Delivery address" required>
+    <select id="oPay"><option>Cash on Delivery</option><option>GCash</option><option>Bank Transfer</option></select>
+    <p id="oSummary"></p>
+    <p id="oErr" class="err"></p>
+    <div class="row"><button type="button" id="cancelOrder" class="ghost">Cancel</button><button class="gold-btn">Place Order</button></div>
+  </form>
+</div>
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
